@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+  {% for project in projects2.all %}
+  <div class = "row pt-3">
+    <div class = "col-2">
+      <!-- image tag for thumbnail -->
+      Thumbnail
+    </div>
+
+    <div class = "col-10" onclick="window.location='{% url 'detail2' project.id %}';" style = "cursor:pointer;">
+      <h1>{{project.title}}</h1>
+      <p>{{project.summary}}</p>
+    </div>
+    <!-- Add a Download / Comments button -->
+  </div>
+  {% endfor %}
+{% else %}
+<h1>This webpage is dedicated to deep learning and its projects.</h1>
+<!-- Do something here which shows a list of all the datascience projects. But you cannot open them. -->
+{% endif %}
+{% endblock %}

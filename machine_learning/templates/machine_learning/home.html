@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1>You are logged in to datascience.</h1>
+{% else %}
+<h1>This website is dedicated to datascience and its projects.</h1>
+<!-- Do something here which shows a list of all the datascience projects. But you cannot open them. -->
+{% endif %}
+{% endblock %}

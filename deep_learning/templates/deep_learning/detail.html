@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div class = "row">
+
+  <div class = "col-12">
+    <a href="{{project2.url}}"><h1>{{project2.title}}</h1></a>
+  </div>
+</div>
+<div class = "row">
+    <div class = "col-4">
+        <h4>User : {{project2.site_user.username}}</h4>
+    </div>
+    <div class="col-2"></div>
+    <div class = "col-4">
+        <h4>Date : {{project2.pub_date_pretty}}</h4>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-12">
+        <p>{{project2.body}}</p>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-12">
+        <p>{{project2.code}}</p>
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-12">
+        <img src="{{project2.output.url}}" class = "img-fluid" width = 800 height = 1000>
+    </div>
+</div>
+
+
+{% endblock %}
